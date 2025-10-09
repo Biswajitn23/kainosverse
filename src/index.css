@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 165 56% 99%;
+    --foreground: 205 100% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 205 100% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 205 100% 12%;
+
+    --primary: 205 100% 12%;
+    --primary-foreground: 165 56% 99%;
+
+    --secondary: 165 40% 96%;
+    --secondary-foreground: 205 100% 12%;
+
+    --muted: 205 30% 90%;
+    --muted-foreground: 205 20% 45%;
+
+    --accent: 209 89% 38%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 205 30% 85%;
+    --input: 205 30% 90%;
+    --ring: 209 89% 38%;
+
+    --radius: 0.75rem;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(205 100% 12%), hsl(209 89% 38%));
+    --gradient-accent: linear-gradient(135deg, hsl(209 89% 38%), hsl(209 89% 50%));
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 205 100% 8%;
+    --foreground: 165 56% 99%;
+
+    --card: 205 100% 12%;
+    --card-foreground: 165 56% 99%;
+
+    --popover: 205 100% 12%;
+    --popover-foreground: 165 56% 99%;
+
+    --primary: 165 56% 99%;
+    --primary-foreground: 205 100% 12%;
+
+    --secondary: 205 50% 20%;
+    --secondary-foreground: 165 56% 99%;
+
+    --muted: 205 50% 20%;
+    --muted-foreground: 205 30% 70%;
+
+    --accent: 209 89% 38%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 205 50% 20%;
+    --input: 205 50% 20%;
+    --ring: 209 89% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+}
