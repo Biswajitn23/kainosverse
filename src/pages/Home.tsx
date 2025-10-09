@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
+import MobileHeaderSpacer from "@/components/MobileHeaderSpacer";
 import {
   Lightbulb,
   Users,
@@ -95,14 +96,17 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Mobile Header Spacer - prevents navbar collision */}
+      <MobileHeaderSpacer />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center text-primary-foreground overflow-hidden">
+      <section className="relative min-h-screen md:min-h-screen flex items-center justify-center text-primary-foreground overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroCover} alt="Startup team collaborating" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-accent/90" />
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-8 md:py-0">
           <div className="flex justify-center mb-8 animate-fade-in">
             <img src="/kainologo.png" alt="Kainosverse Logo" className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48" />
           </div>

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
 
@@ -14,8 +15,21 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+    
+    // Initial check
+    handleResize();
+    
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const navLinks = [
@@ -31,7 +45,7 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isHome
-          ? isScrolled
+          ? isScrolled || isMobileMenuOpen || isMobile
             ? "bg-primary/90 backdrop-blur-md shadow-lg"
             : "bg-transparent"
           : "bg-primary/90 backdrop-blur-md shadow-lg"
@@ -77,21 +91,26 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-primary-foreground"
+            className="md:hidden text-primary-foreground hover:text-accent-foreground transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-4">
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="py-4 space-y-4 bg-primary/95 backdrop-blur-md border-t border-primary-foreground/20">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`group block text-primary-foreground hover:text-accent-foreground transition-colors font-medium py-2 ${
+                className={`group block text-primary-foreground hover:text-accent-foreground transition-colors font-medium py-2 px-4 ${
                   location.pathname === link.path ? "text-accent-foreground" : ""
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -107,18 +126,21 @@ const Navigation = () => {
                 </span>
               </Link>
             ))}
-            <a
-              href="https://forms.gle/aoxXLX6uD7zSRTee9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <Button variant="hero" size="lg" className="w-full">
-                Register Now
-              </Button>
-            </a>
+            <div className="px-4 pt-4 pb-2">
+              <a
+                href="https://forms.gle/aoxXLX6uD7zSRTee9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Button variant="hero" size="lg" className="w-full">
+                  Register Now
+                </Button>
+              </a>
+            </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
