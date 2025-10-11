@@ -20,11 +20,13 @@ const About = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const team = [
-    { name: "Md. Shohrab Alam", role: "Founder", image: founderShohrab },
-    { name: "Apoorva Sahu", role: "Co-founder", image: teamApoorva },
-    { name: "Shruti Singh", role: "Social Media Manager", image: teamShruti },
-    { name: "Ishna Singh", role: "Marketing Executive", image: teamIshna },
-    { name: "Ananya Dubey", role: "Marketing Executive", image: teamAnanya },
+    { name: "Md. Shohrab Alam", role: "Founder", image: founderShohrab, position: "object-top" },
+    { name: "Apoorva Sahu", role: "Co-founder", image: teamApoorva, position: "object-top" },
+    { name: "Shruti Singh", role: "Social Media Manager", image: teamShruti, position: "object-top" },
+    { name: "Ishna Singh", role: "Marketing Executive", image: teamIshna, position: "object-top" },
+    { name: "Ananya Dubey", role: "Marketing Executive", image: teamAnanya, position: "object-top" },
+    { name: "Nitin Singh", role: "Web Developer", image: "/nitin.png", position: "object-center" },
+    { name: "Biswajit Nayak", role: "Web Developer", image: "/biswajit.png", position: "object-bottom" },
   ];
 
   return (
@@ -277,7 +279,7 @@ const About = () => {
                         <img 
                           src={member.image} 
                           alt={member.name} 
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                          className={`w-full h-full object-cover ${member.position || 'object-top'} group-hover:scale-105 transition-transform duration-300`}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
