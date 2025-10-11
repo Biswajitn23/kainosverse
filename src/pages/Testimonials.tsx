@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Testimonials = () => {
   const testimonials = [
@@ -94,18 +95,18 @@ const Testimonials = () => {
             Join our community and become part of the Kainosverse journey
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/programs"
+            <Link
+              to="/programs"
               className="inline-block px-8 py-4 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Explore Programs
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Get In Touch
-            </a>
+            </Link>
           </div>
         </div>
       </section>
