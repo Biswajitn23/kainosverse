@@ -108,7 +108,7 @@ const Home = () => {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-8 md:py-0">
           <div className="flex justify-center mb-8 animate-fade-in">
-            <img src="/kainologo.png" alt="Kainosverse Logo" className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48" />
+            <img src="/kainologo.png" alt="Kainosverse Logo" className="w-40 h-32 md:w-52 md:h-40 lg:w-64 lg:h-48" />
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
             Step into Kainosverse
@@ -226,26 +226,72 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-foreground">
             Companies We Have Worked With
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center max-w-6xl mx-auto">
             {[
               { name: "IRON TAILOR", logo: "/iron.jpg" },
               { name: "AI Startup SHOW", logo: "/aiss.png" },
               { name: "THE SILVER HILLS", logo: "/silver.png" },
               { name: "learnia.ai", logo: "/learnai.png" },
+              { name: "YI Raipur", logo: "/yi.jpg" },
+              { name: "AI Ready School", logo: "/aiready.jpg" },
+              { name: "Baya Studio", logo: "/baya.jpg" },
+              { name: "Raipur Government", logo: "/raipur.jpg" },
             ].map((c, idx) => (
               <div
                 key={idx}
-                className="bg-white/80 border-2 border-gray-200 rounded-md p-8 flex flex-col justify-between h-48 hover:shadow-lg hover:bg-white transition-all duration-300"
+                className="bg-white/80 border-2 border-gray-200 rounded-md p-6 flex flex-col justify-between h-56 hover:shadow-lg hover:bg-white transition-all duration-300"
               >
                 <div className="flex justify-center items-center flex-1">
                   <img
                     src={c.logo}
                     alt={`${c.name} logo`}
-                    className="max-h-24 w-auto opacity-100 hover:opacity-100 transition-opacity"
+                    className="max-h-32 w-auto opacity-100 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <p className="text-sm font-semibold text-blue-600 text-center leading-tight">
                   {c.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Schools We Have Worked With */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-foreground">
+            Schools We Have Worked With
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 items-center max-w-6xl mx-auto">
+            {[
+              { name: "Aarambh School - Raipur", logo: "/aarambh.jpg" },
+              { name: "Amity International School, Naya Raipur", logo: "/amity.jpg" },
+              { name: "Cardinal Warriors", logo: "/cardinal.jpg" },
+              { name: "Curious Hues", logo: "/curios.jpg" },
+              { name: "JB International School, Tilda", logo: "/jb.jpg" },
+              { name: "Krishna Public School", logo: "/kps.jpg" },
+              { name: "Maharashtra Mandal Raipur", logo: "/mmr.jpg" },
+              { name: "N.H. Goel World School", logo: "/nh.jpg" },
+              { name: "Rungta Group Of Institutions", logo: "/rungta.jpg" },
+              { name: "Saraswati Shishu Mandir", logo: "/saraswati.jpg" },
+              { name: "Chhattisgarh Shasan", logo: "/sasan.jpg" },
+              { name: "Swami Atmanand Govt. English Medium Model College Atari, Raipur", logo: "/swami.jpg" },
+              { name: "Krishna Vikash Group of Institutions", logo: "/vikash.jpg" },
+            ].map((school, idx) => (
+              <div
+                key={idx}
+                className="bg-white border-2 border-gray-200 rounded-lg p-4 flex flex-col justify-between h-52 hover:shadow-lg hover:border-accent transition-all duration-300"
+              >
+                <div className="flex justify-center items-center flex-1">
+                  <img
+                    src={school.logo}
+                    alt={`${school.name} logo`}
+                    className="max-h-28 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <p className="text-sm font-semibold text-accent text-center leading-tight mt-3">
+                  {school.name}
                 </p>
               </div>
             ))}
