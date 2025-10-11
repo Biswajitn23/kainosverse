@@ -67,7 +67,7 @@ const Programs = () => {
         "Networking with industry experts",
       ],
       cta: "See Upcoming Events",
-      link: "/contact",
+      link: "https://forms.gle/mnxu2xAJ3jvfHqVY8",
     },
     {
       icon: <Briefcase className="w-10 h-10" />,
@@ -81,7 +81,7 @@ const Programs = () => {
         "Real-world problem solving",
       ],
       cta: "Apply Now",
-      link: "mailto:kainosverse@gmail.com",
+      link: "https://forms.gle/jUdRHXdvtGWAY8bv5",
     },
     {
       icon: <TrendingUp className="w-10 h-10" />,
@@ -95,7 +95,7 @@ const Programs = () => {
         "Business model refinement",
       ],
       cta: "Partner / Pitch",
-      link: "mailto:kainosverse@gmail.com",
+      link: "https://forms.gle/qUBpu2DsNWDD6xk16",
     },
     {
       icon: <Users className="w-10 h-10" />,
@@ -109,7 +109,7 @@ const Programs = () => {
         "Collaborative opportunities",
       ],
       cta: "Join Next Event",
-      link: "/contact",
+      link: "https://forms.gle/mUeT8PV4dFGmGLGB6",
     },
   ];
 
