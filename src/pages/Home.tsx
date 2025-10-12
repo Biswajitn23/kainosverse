@@ -236,6 +236,7 @@ const Home = () => {
               { name: "AI Ready School", logo: "/aiready.jpg" },
               { name: "Baya Studio", logo: "/baya.jpg" },
               { name: "Raipur Government", logo: "/raipur.jpg" },
+              { name: "Curious Hues", logo: "/curios.jpg" },
             ].map((c, idx) => (
               <div
                 key={idx}
@@ -268,7 +269,6 @@ const Home = () => {
               { name: "Aarambh School - Raipur", logo: "/aarambh.jpg" },
               { name: "Amity International School, Naya Raipur", logo: "/amity.jpg" },
               { name: "Cardinal Warriors", logo: "/cardinal.jpg" },
-              { name: "Curious Hues", logo: "/curios.jpg" },
               { name: "JB International School, Tilda", logo: "/jb.jpg" },
               { name: "Krishna Public School", logo: "/kps.jpg" },
               { name: "Maharashtra Mandal Raipur", logo: "/mmr.jpg" },
