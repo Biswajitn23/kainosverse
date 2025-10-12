@@ -276,7 +276,7 @@ const Home = () => {
               { name: "Rungta Group Of Institutions", logo: "/rungta.jpg" },
               { name: "Saraswati Shishu Mandir", logo: "/saraswati.jpg" },
               { name: "Chhattisgarh Shasan", logo: "/sasan.jpg" },
-              { name: "Swami Atmanand Govt. English Medium Model College Atari, Raipur", logo: "/swami.jpg" },
+              { name: "Swami Atmanand Govt. English Medium Model College", logo: "/swami.jpg" },
               { name: "Krishna Vikash Group of Institutions", logo: "/vikash.jpg" },
             ].map((school, idx) => (
               <div
