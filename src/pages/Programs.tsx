@@ -31,7 +31,7 @@ const Programs = () => {
       icon: <Rocket className="w-10 h-10" />,
       title: "Entrepreneurship Development Camps - College",
       description:
-        "10–15 day intensive hands-on camps for college students teaching ideation, SWOT analysis, market research, the ₹500-to-Fortune challenge, and team-based product development.",
+        "30-45 days intensive hands-on camps for college students teaching ideation, SWOT analysis, market research, the ₹500-to-Fortune challenge, and team-based product development.",
       outcomes: [
         "Market-tested mini-products",
         "Professional pitch decks",
@@ -45,7 +45,7 @@ const Programs = () => {
       icon: <GraduationCap className="w-10 h-10" />,
       title: "Entrepreneurship Development Camps - School",
       description:
-        "10–15 day engaging hands-on camps for school students introducing entrepreneurial thinking, problem-solving, market research basics, and creative challenges.",
+        "30-45 days engaging hands-on camps for school students introducing entrepreneurial thinking, problem-solving, market research basics, and creative challenges.",
       outcomes: [
         "Introduction to entrepreneurship",
         "Problem-solving skills development",
