@@ -39,7 +39,7 @@ const Programs = () => {
         "Demo day presentations",
       ],
       cta: "Register Now (College)",
-      link: "https://forms.gle/DDAEyAyFjBq3EpMN6",
+      link: "https://forms.gle/FCG3L12Vbge4Aqs76",
     },
     {
       icon: <GraduationCap className="w-10 h-10" />,
@@ -53,7 +53,7 @@ const Programs = () => {
         "Team collaboration experience",
       ],
       cta: "Register Now (School)",
-      link: "https://forms.gle/FCG3L12Vbge4Aqs76",
+      link: "https://forms.gle/DDAEyAyFjBq3EpMN6",
     },
     {
       icon: <Zap className="w-10 h-10" />,
