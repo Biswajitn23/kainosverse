@@ -9,7 +9,7 @@ import Programs from "./pages/Programs";
 import Testimonials from "./pages/Testimonials";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
+import Blogs from "./pages/Blogs";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -34,7 +34,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/programs" element={<Programs />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blogs" element={<Blogs />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />

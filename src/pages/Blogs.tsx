@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import MobileHeaderSpacer from "@/components/MobileHeaderSpacer";
 import { Card, CardContent } from "@/components/ui/card";
 
-const Blog = () => {
+const Blogs = () => {
   return (
     <div data-lenis className="min-h-screen pt-16 md:pt-20 bg-background">
-  <section className="py-16 md:py-20 bg-gradient-to-br from-primary via-accent to-primary text-primary-foreground relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-primary via-accent to-primary text-primary-foreground relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Blogs</h1>
           <p className="text-base md:text-lg md:text-xl max-w-3xl mx-auto opacity-90">
@@ -62,4 +62,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Blogs;
